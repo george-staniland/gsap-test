@@ -2,6 +2,7 @@ html, body {
     padding: 0;
     margin: 0;
     font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -9,4 +10,51 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 }
 
+h1 {
+    font-size: 6rem
+}
 
+
+section {
+    min-height: 100svh;
+    position: relative;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-1 {
+    background-color: rgb(125, 193, 244);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-1 h1 {
+    font-size: 6rem;
+}
+
+.section-2 {
+    background-color: seagreen;
+}
+.section-2 h1 {
+   color: rgb(15, 15, 15);
+   transform: translateX(-53vw);
+}
+
+.section-2 .circle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 0vh;
+    width: 0vh;
+    border-radius: 50%;
+    border: 3px solid rgba(0, 0, 0, 0);
+}
+
+.section-3 {
+    background-color: azure;
+}
