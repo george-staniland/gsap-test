@@ -6,10 +6,10 @@ timeline
   .from('.section-1 .sequence', { duration: 1, x: '-100vw', stagger: .5, ease: 'bounce'  })
 
 const btn = document.querySelector('.run-btn');
-btn.addEventListener(addEventListener( 'click', () => {
+btn.addEventListener('click', () => {
   timeline.timeScale(3)
   timeline.reverse();
-} ))
+})
 
 // Section 2
 addEventListener("load", (event) => {
@@ -59,5 +59,16 @@ addEventListener("load", (event) => {
 
 
 
+// Section 3
 
+Draggable.create("#drag-image");
 
+Draggable.create("#drag-image", {
+  onDragEnd: spinDog,
+  autoScroll: 3,
+});
+
+function spinDog () {
+  console.log('drag end')
+  gsap.fromTo("#drag-image", { rotate: 0 }, { rotate: 360 });
+}
